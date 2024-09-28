@@ -1,1 +1,4 @@
-# expert-system
+# 다와가-약속 앱
+
+## 기술 스택
+- next.js
