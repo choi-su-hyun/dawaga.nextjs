@@ -1,0 +1,35 @@
+.text-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-x-sm);
+
+  label {
+    font-size: var(--font-x-sm);
+    color: var(--cool-gray500);
+  }
+
+  input {
+    padding: var(--space-x-sm);
+    border: none;
+    border-bottom: 0.1rem solid var(--cool-gray500);
+    font-size: var(--font-mid);
+    color: var(--cool-gray700);
+    font-family: var(--font-pretendard);
+
+    &::placeholder {
+      color: var(--cool-gray400);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus {
+      border-bottom: 0.1rem solid var(--primary);
+    }
+  }
+  &__error-text {
+    font-size: var(--font-x-sm);
+    color: var(--alert-color);
+  }
+}
