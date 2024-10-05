@@ -1,0 +1,37 @@
+// 섹션 container
+.section {
+  padding: 1.6rem 0;
+}
+.section-container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.6rem;
+}
+
+// 레이아웃 좌/우/중앙으로 flex
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//form 관련
+.form {
+  display: flex;
+  flex-direction: column;
+  .form-input-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  &.form-space-gap {
+    height: calc(100vh - 5.7rem - 3.2rem);
+    justify-content: space-between;
+  }
+}
+
+.btn-row-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
