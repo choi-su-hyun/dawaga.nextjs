@@ -14,7 +14,9 @@ const Header: NextPage = ({}) => {
   const pathName = usePathname();
   return (
     <header className={S.header}>
-      <Logo />
+      <Link href={"/"}>
+        <Logo />
+      </Link>
       <h1>{getPageName(pathName)}</h1>
       <nav>
         <ul>

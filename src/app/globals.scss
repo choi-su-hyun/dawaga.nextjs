@@ -124,9 +124,47 @@ table {
   border-spacing: 0;
 }
 
+// css 변수 및 기본 스타일
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  //글자 크기
+  --font-x-sm: 1.2rem;
+  --font-sm: 1.4rem;
+  --font-mid: 1.6rem;
+  --font-mid2: 1.8rem;
+  --font-mid3: 2rem;
+  --font-lg: 2.4rem;
+
+  //색상
+  --cool-gray900: #29333d;
+  --cool-gray800: #3d4d5c;
+  --cool-gray700: #52677a;
+  --cool-gray600: #668099;
+  --cool-gray500: #a3b3c2;
+  --cool-gray400: #c2ccd6;
+  --cool-gray300: #e1e6eb;
+  --cool-gray200: #f3f5f7;
+  --cool-gray100: #f9fafb;
+  --primary-dark1: #fa3e00;
+  --primary: #ff622e;
+  --primary-light1: #ff8861;
+  --primary-light2: #ffece5;
+  --secondary-dark1: #d68000;
+  --secondary: #ffb13d;
+  --secondary-light1: #ffdaa3;
+  --secondary-light2: #ffefd6;
+  --alert-color: #eb5757;
+  --success-color: #27ae60;
+
+  //space
+  --space-x-sm: 0.4rem;
+  --space-sm: 0.6rem;
+  --space-mid: 0.8rem;
+
+  //border-radius
+  --border-radius-mid: 1.2rem;
 }
 
 @media (prefers-color-scheme: dark) {
