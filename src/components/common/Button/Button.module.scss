@@ -1,0 +1,32 @@
+// 버튼 기본 속성
+.btn-style {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--pretendard);
+  font-size: 1.6rem;
+}
+
+// variant START
+.cta-btn {
+  font-weight: 700;
+  color: white;
+  background-color: var(--primary);
+}
+.text-center {
+  font-weight: 700;
+  color: var(--cool-gray500);
+  background-color: transparent;
+}
+// variant END
+
+// size START
+.size-small {
+  padding: 1.6rem;
+  border-radius: var(--border-radius-mid);
+  font-size: var(--font-mid);
+}
+// size END
+.full-width {
+  width: 100%;
+}
