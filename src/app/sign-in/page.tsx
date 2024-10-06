@@ -5,7 +5,11 @@ import LogoAndName from "@/assets/logoAndName.svg";
 import TextInput from "@/components/common/Input/TextInput";
 import { useForm, FieldErrors } from "react-hook-form";
 import Button from "@/components/common/Button/Button";
-import { EXCLUDE_EN_NUM_REGEX } from "@/utils/inputTextLimit";
+import {
+  VALID_EN_NUM_REGEX,
+  VALID_BIG_EN_EN_NUM_REGEX,
+} from "@/utils/inputTextLimit";
+import Link from "next/link";
 // interface Props {}
 interface FormInput {
   id: string;
@@ -34,7 +38,7 @@ const SignIn: NextPage = ({}) => {
       <section className="section">
         <div className="section-container">
           <form
-            className="form form-space-gap"
+            className="form form-space-gap--sm"
             onSubmit={handleSubmit(onValid, onInValid)}
           >
             <div className="form-input-wrap">
@@ -43,10 +47,10 @@ const SignIn: NextPage = ({}) => {
               </div>
               <TextInput
                 register={register("id", {
-                  required: { value: true, message: "필수값입니다." },
+                  required: { value: true, message: "아이디를 입력해주세요." },
                   maxLength: 8,
                   pattern: {
-                    value: EXCLUDE_EN_NUM_REGEX,
+                    value: VALID_EN_NUM_REGEX,
                     message: "한글은 작성할 수 없습니다.",
                   },
                 })}
@@ -58,13 +62,19 @@ const SignIn: NextPage = ({}) => {
               />
               <TextInput
                 register={register("password", {
-                  required: true,
+                  required: { value: true, message: "비밀번호를 입력해주세요" },
                   maxLength: 8,
+                  pattern: {
+                    value: VALID_BIG_EN_EN_NUM_REGEX,
+                    message:
+                      "비밀번호는 영어(대문자 포함), 숫자, 특수문자를 적어도 하나씩 포함되어야합니다.",
+                  },
                 })}
                 type="password"
                 label="비밀번호"
                 name="password"
                 placeholder="비밀번호를 입력해주세요"
+                errorText={errors.password?.message}
               />
             </div>
             <div className="btn-row-wrap">
@@ -76,9 +86,11 @@ const SignIn: NextPage = ({}) => {
               >
                 로그인 하기
               </Button>
-              <Button variant="text-center" type="submit" isFullWidth>
-                회원가입 하러 가기
-              </Button>
+              <Link href="/sign-up">
+                <Button variant="text-center" type="submit" isFullWidth>
+                  회원가입 하러 가기
+                </Button>
+              </Link>
             </div>
           </form>
         </div>

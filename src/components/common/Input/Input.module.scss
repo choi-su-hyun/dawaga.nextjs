@@ -28,8 +28,15 @@
       border-bottom: 0.1rem solid var(--primary);
     }
   }
+
   &__error-text {
     font-size: var(--font-x-sm);
+    font-weight: var(--small-text-font-weight);
     color: var(--alert-color);
+  }
+
+  &__success-text {
+    font-size: var(--font-x-sm);
+    color: var(--success-color);
   }
 }
