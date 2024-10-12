@@ -1,0 +1,39 @@
+.modal {
+  &__overlay {
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-modal);
+
+    &.modal--bottom {
+      align-items: flex-end;
+    }
+  }
+
+  &__content-box {
+    position: absolute;
+    box-shadow: var(--box-shadow-modal);
+    border-radius: var(--border-radius-sm);
+    background-color: white;
+
+    &.modal--bottom {
+      border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+    }
+
+    &.modal-content--full-width {
+      width: 100%;
+      padding: 2rem 1.6rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+    font-size: var(--font-mid);
+    font-weight: 700;
+    color: var(--cool-gray900);
+  }
+}
