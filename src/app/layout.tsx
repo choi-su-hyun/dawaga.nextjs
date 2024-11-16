@@ -28,6 +28,7 @@ export default function RootLayout({
         <link rel="icon" href="./favicon.ico" />
       </Head>
       <body className={`${pretendard.variable}`}>
+        <div id="modal"></div>
         <Header />
         {children}
       </body>

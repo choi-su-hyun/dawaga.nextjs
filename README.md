@@ -40,3 +40,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## 기술 스택
 
 - next.js
+
+###z-index
+
+- header: 10
+- modal: 20

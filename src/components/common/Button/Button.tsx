@@ -2,8 +2,12 @@ import { NextPage } from "next";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import style from "./Button.module.scss";
 
-type ButtonVariantType = "cta-btn" | "ghost-btn" | "text-center";
-type ButtonSizeType = "size-small";
+type ButtonVariantType =
+  | "cta-btn"
+  | "ghost-btn"
+  | "text-center"
+  | "secondary-btn";
+type ButtonSizeType = "size-small" | "size-x-small";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string;

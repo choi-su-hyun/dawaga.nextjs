@@ -1,5 +1,6 @@
 // 버튼 기본 속성
 .btn-style {
+  white-space: nowrap;
   outline: none;
   border: none;
   cursor: pointer;
@@ -18,9 +19,19 @@
   color: var(--cool-gray500);
   background-color: transparent;
 }
+.secondary-btn {
+  font-weight: 700;
+  color: var(--cool-gray900);
+  background-color: var(--secondary);
+}
 // variant END
 
 // size START
+.size-x-small {
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-sm);
+}
 .size-small {
   padding: 1.6rem;
   border-radius: var(--border-radius-mid);

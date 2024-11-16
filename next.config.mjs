@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // 기존설정에 아래 추가
+  // basePath: ,
+  // cache: false,
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/i,

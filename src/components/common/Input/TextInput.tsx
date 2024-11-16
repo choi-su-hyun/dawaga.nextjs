@@ -5,7 +5,7 @@ import { UseFormRegisterReturn } from "react-hook-form";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  label: string;
+  label?: string;
   errorText?: string;
   successText?: string;
   register: UseFormRegisterReturn;

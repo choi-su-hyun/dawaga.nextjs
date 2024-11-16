@@ -24,8 +24,12 @@
     flex-direction: column;
     gap: 2.4rem;
   }
-  &.form-space-gap {
+  &.form-space-gap--sm {
     height: calc(100vh - 5.7rem - 3.2rem);
+    justify-content: space-between;
+  }
+  &.form-space-gap--md {
+    height: calc(100vh - 5.7rem - 4rem - 1.6rem);
     justify-content: space-between;
   }
 }
